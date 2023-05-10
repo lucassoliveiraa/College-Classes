@@ -1,0 +1,1 @@
+chefiado_por(P, director), not(cargo(P, carolina)). 

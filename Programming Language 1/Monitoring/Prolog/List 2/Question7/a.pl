@@ -1,0 +1,1 @@
+aluno_professor(X, Y) :- aluno(X, Z), professor(Y, Z)

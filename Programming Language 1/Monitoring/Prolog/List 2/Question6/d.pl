@@ -1,0 +1,1 @@
+cargo(J,P), (chefiado_por(J, supervisor_chefe); chefiado_por(J, supervisor)).

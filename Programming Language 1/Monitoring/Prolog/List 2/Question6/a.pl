@@ -1,0 +1,1 @@
+chefiado_por(tecnico, X), chefeido_por(X,Y). 

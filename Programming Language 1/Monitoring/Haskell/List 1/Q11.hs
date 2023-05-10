@@ -9,7 +9,6 @@ prazo valor quant | quant >= 1 && quant <= 2 = valor
 
 main :: IO()
 main = do 
-
     putStrLn "Digite o valor: "
     valor <- readLn
 
@@ -29,6 +28,5 @@ main = do
         quant <- readLn
         let valorFinal = prazo valor quant 
         putStrLn ("Valor final = " ++ show(prazo valor quant) ++ " divido em " ++ show quant ++ " parcelas")
-
     else 
         putStrLn "Operação incorreta"

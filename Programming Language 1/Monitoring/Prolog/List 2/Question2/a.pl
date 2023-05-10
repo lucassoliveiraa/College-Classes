@@ -1,0 +1,1 @@
+casado(ana, bruno), gosta(ana, vinhoverde), gosta(bruno, vinhoverde).

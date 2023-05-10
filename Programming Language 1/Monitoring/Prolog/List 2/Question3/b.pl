@@ -1,0 +1,1 @@
+mora_em(joao, casa), mora_em(maria, casa), gosta_de(joao, esporte), gosta_de(maria, esporte).

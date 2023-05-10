@@ -1,0 +1,1 @@
+mora_em(X, apartamento), gosta_de(X, animal).

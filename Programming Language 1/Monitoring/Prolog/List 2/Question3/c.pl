@@ -1,0 +1,1 @@
+gosta_de(X, esporte), gosta_de(X, jogo).

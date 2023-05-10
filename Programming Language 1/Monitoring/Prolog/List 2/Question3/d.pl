@@ -1,0 +1,1 @@
+mulher(X), gosta_de(X, tenis), gosta_de(X, tigre).
