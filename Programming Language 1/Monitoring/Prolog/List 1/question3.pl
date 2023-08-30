@@ -1,2 +1,0 @@
-progenitor(X, iris).
-

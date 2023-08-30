@@ -1,0 +1,2 @@
+progenitor(X, iris).
+
