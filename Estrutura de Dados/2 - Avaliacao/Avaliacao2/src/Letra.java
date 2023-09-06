@@ -2,6 +2,11 @@ public class Letra {
     private char letra;
     private int posicao;
 
+    public Letra(char letra, int posicao) {
+        this.letra = letra;
+        this.posicao = posicao;
+    }
+
     public char getLetra() {
         return letra;
     }
