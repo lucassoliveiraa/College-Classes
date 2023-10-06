@@ -138,7 +138,7 @@ public class GerenciaFilas {
     }
     public FilaBanco intercala() {
         FilaBanco fila = null;
-        if(filaCaixa.tamanho() < filaHbt.tamanho() && filaCaixa.tamanho() < filaFin.tamanho() && filaCaixa .tamanho() < filaGer.tamanho()) {
+        if(filaCaixa.tamanho() < filaHbt.tamanho() && filaCaixa.tamanho() < filaFin.tamanho() && filaCaixa.tamanho() < filaGer.tamanho() && !filaCaixa.vazia()) {
             while(!filaHbt.vazia()) {
                 filaHbt.removerIntercalar();
                 filaCaixa.insere(filaHbt.chama());
@@ -152,7 +152,7 @@ public class GerenciaFilas {
                 filaCaixa.insere(filaGer.chama());
             }
             return filaCaixa;
-        } else if(filaHbt.tamanho() < filaCaixa.tamanho() && filaHbt.tamanho() > filaFin.tamanho() && filaHbt.tamanho() > filaGer.tamanho()) {
+        } else if(filaHbt.tamanho() < filaCaixa.tamanho() && filaHbt.tamanho() > filaFin.tamanho() && filaHbt.tamanho() > filaGer.tamanho() && !filaHbt.vazia()) {
             while(!filaCaixa.vazia()) {
                 filaCaixa.removerIntercalar();
                 filaHbt.insere(filaCaixa.chama());
@@ -166,7 +166,7 @@ public class GerenciaFilas {
                 filaHbt.insere(filaGer.chama());
             }
             return filaHbt;
-        } else if(filaFin.tamanho() < filaCaixa.tamanho() && filaFin.tamanho() > filaHbt.tamanho() && filaFin.tamanho() < filaGer.tamanho()) {
+        } else if(filaFin.tamanho() < filaCaixa.tamanho() && filaFin.tamanho() > filaHbt.tamanho() && filaFin.tamanho() < filaGer.tamanho() && !filaFin.vazia()) {
             while(!filaCaixa.vazia()) {
                 filaCaixa.removerIntercalar();
                 filaFin.insere(filaCaixa.chama());
@@ -180,7 +180,7 @@ public class GerenciaFilas {
                 filaFin.insere(filaGer.chama());
             }
             return filaFin;
-        } else if(filaGer.tamanho() < filaCaixa.tamanho() && filaGer.tamanho() < filaHbt.tamanho() && filaGer.tamanho() < filaFin.tamanho()) {
+        } else if(filaGer.tamanho() < filaCaixa.tamanho() && filaGer.tamanho() < filaHbt.tamanho() && filaGer.tamanho() < filaFin.tamanho() && !filaGer.vazia()) {
             while(!filaCaixa.vazia()) {
                 filaCaixa.removerIntercalar();
                 filaGer.insere(filaCaixa.chama());

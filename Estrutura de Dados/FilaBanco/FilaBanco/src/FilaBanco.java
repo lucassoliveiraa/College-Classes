@@ -45,6 +45,7 @@ public class FilaBanco {
 
         if(filaNormal.isEmpty() && filaPrioridade.isEmpty())
         {
+            System.out.println("Erro aqui");
             System.out.println("Filas vazias");
             ordemA = null;
         } else {

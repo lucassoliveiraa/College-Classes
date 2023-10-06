@@ -8,7 +8,6 @@ import java.util.Stack;
 
 public class Main {
 
-
     public static void main(String[] args) throws FileNotFoundException {
         LinkedList<Palavra> lista = new LinkedList<Palavra>();
         SalvaArquivo salva = new SalvaArquivo();
@@ -29,27 +28,27 @@ public class Main {
                     "8 - Criar indice invertido\n" +
                     "9 - Sair"));
             switch (opc) {
-                case 1:
+                case 1 -> {
                     Palavra pal = new Palavra(JOptionPane.showInputDialog("Digite a palavra"));
                     lista.add(pal);
-                    break;
-                case 2:
+                }
+                case 2 -> {
                     String p = JOptionPane.showInputDialog("Digite a palavra que quer remover");
                     Palavra de = new Palavra(p);
                     lista.removeLastOccurrence(de);
-                    break;
-                case 3:
+                }
+                case 3 -> {
                     System.out.println(lista);
-                    break;
-                case 4:
+                }
+                case 4 -> {
                     Queue<Palavra> fila = insercaoFIla(lista);
                     System.out.println(fila);
-                    break;
-                case 5:
+                }
+                case 5 -> {
                     LinkedList<Stack<Palavra>> listaPilhas = insercaoPilha(lista);
                     System.out.println(listaPilhas);
-                    break;
-                case 6:
+                }
+                case 6 -> {
                     Arvore<Palavra> listaArvore = new Arvore<Palavra>();
                     for (int i = 0; i < lista.size(); i++) {
                         listaArvore.adicionar(lista.get(i));
@@ -57,16 +56,16 @@ public class Main {
                     System.out.println("Em Ordem: " + listaArvore.emOrdem(listaArvore.getRaiz()));
                     System.out.println("Pre ordem: " + listaArvore.preOrdem(listaArvore.getRaiz()));
                     System.out.println("Palavras Repetidas: " + listaArvore.exibirRepet());
-                    break;
-                case 7:
+                }
+                case 7 -> {
                     salva.grava(lista);
-                    break;
-                case 8:
+                }
+                case 8 -> {
                     LerTxt ler = new LerTxt();
                     ArrayList<ArrayList<Stack>> oc = new ArrayList<ArrayList<Stack>>();
                     oc.add(ler.ocorrencia(ler.elementosIguais(ler.organizarPilha(ler.pegaTxt()))));
                     System.out.println(oc);
-                    break;
+                }
             }
         } while (opc != 9);
     }

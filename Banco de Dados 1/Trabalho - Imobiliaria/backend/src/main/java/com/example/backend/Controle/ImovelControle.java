@@ -3,11 +3,11 @@ package com.example.backend.Controle;
 import java.util.List;
 import java.util.stream.Collectors;
 
+import com.example.backend.Modelo.Imovel;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import com.example.backend.Modelo.Imovel;
 import com.example.backend.Repositorio.ImovelRepositorio;
 
 import org.springframework.beans.BeanUtils;
@@ -29,7 +29,7 @@ public class ImovelControle {
     @GetMapping("/listar/{bairro}")
     public ResponseEntity<List<Imovel>> listar(@PathVariable String bairro) {
         var imoveis = repositorio.findAll();
-        var imoveisBairro = imoveis.stream().filter(imovel -> imovel.getBairro().equals(bairro)).collect(Collectors.toList());
+        var imoveisBairro = imoveis.stream().filter(imovel ->imovel.getBairro().equals(bairro)).collect(Collectors.toList());
         return ResponseEntity.ok(imoveisBairro)
     
             /*var imoveisBairro

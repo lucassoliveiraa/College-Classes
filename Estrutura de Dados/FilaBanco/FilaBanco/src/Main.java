@@ -119,7 +119,7 @@ public class Main {
                     JOptionPane.showMessageDialog(null, "Total de senhas: " + totalSenha);
                     break;
                 case 7:
-                    FilaBanco novo= filas.intercala();
+                    FilaBanco novo = filas.intercala();
                     novo.ordemAtendimento();
                     break;
                 case 8:

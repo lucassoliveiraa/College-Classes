@@ -43,10 +43,10 @@ public class Torre {
         }
         lista.add(pilha2);
         lista.add(pilha3);
-        Jogada();
+        jogada();
     }
     
-    public static void Jogada() 
+    public static void jogada()
     {
         int origem, destino; //Pilhas
         
@@ -98,11 +98,11 @@ public class Torre {
                 ganhou = true;
                 System.out.println("Parabens, voce ganhou com " + ct + " tentativas");
             } else {
-                Opcao();     
+                opcao();
             }
         }
     }
-    public static boolean Opcao() {
+    public static boolean opcao() {
         int opcao;
         
         System.out.println("-----------------------------------");
@@ -112,27 +112,27 @@ public class Torre {
             desistir = true;
             System.out.println("PERDEDOR!! SUA FAMILIA AMALDICOOU O DIA EM QUE TU NASCESTE");
         } else if(opcao == 3) {
-            Dica();
+            dica();
         }
         return desistir;
     }
     
-    public static void Dica() {
+    public static void dica() {
         try {  
-            if ( pilha1.olha().getTamanho() <  pilha2.olha().getTamanho() || !pilha1.vazia() && pilha2.vazia() ) {
+            if ( pilha3.olha().getTamanho() <  pilha2.olha().getTamanho() || !pilha3.vazia() && pilha2.vazia() ) {
 
-                System.out.println("Origem: " + pilha1.olha() + " e " + "Destino: " + pilha2.olha());
+                System.out.println("Origem: " + pilha3.olha() + " e " + "Destino: " + pilha2.olha());
                 
-            } else if(pilha1.olha().getTamanho() <  pilha3.olha().getTamanho() || !pilha1.vazia() && pilha3.vazia()) {
-                System.out.println("Origem: " + pilha1.olha() + " e " + "Destino: " + pilha3.olha());
-            } else if(pilha2.olha().getTamanho() <  pilha1.olha().getTamanho() || !pilha2.vazia() && pilha1.vazia()) {
-                System.out.println("Origem: " + pilha2.olha() + " e " + "Destino: " + pilha1.olha());
-            } else if(pilha2.olha().getTamanho() <  pilha3.olha().getTamanho() || !pilha2.vazia() && pilha3.vazia()) {
-                System.out.println("Origem: " + pilha2.olha() + " e " + "Destino: " + pilha3.olha());
             } else if(pilha3.olha().getTamanho() <  pilha1.olha().getTamanho() || !pilha3.vazia() && pilha1.vazia()) {
                 System.out.println("Origem: " + pilha3.olha() + " e " + "Destino: " + pilha1.olha());
-            } else if(pilha3.olha().getTamanho() <  pilha2.olha().getTamanho() || !pilha3.vazia() && pilha2.vazia()) {
+            } else if(pilha2.olha().getTamanho() <  pilha3.olha().getTamanho() || !pilha2.vazia() && pilha3.vazia()) {
                 System.out.println("Origem: " + pilha3.olha() + " e " + "Destino: " + pilha2.olha());
+            } else if(pilha2.olha().getTamanho() <  pilha1.olha().getTamanho() || !pilha2.vazia() && pilha1.vazia()) {
+                System.out.println("Origem: " + pilha2.olha() + " e " + "Destino: " + pilha1.olha());
+            } else if(pilha1.olha().getTamanho() <  pilha3.olha().getTamanho() || !pilha1.vazia() && pilha3.vazia()) {
+                System.out.println("Origem: " + pilha1.olha() + " e " + "Destino: " + pilha3.olha());
+            } else if(pilha1.olha().getTamanho() <  pilha2.olha().getTamanho() || !pilha1.vazia() && pilha2.vazia()) {
+                System.out.println("Origem: " + pilha1.olha() + " e " + "Destino: " + pilha2.olha());
             }
         } catch(Exception e) {
             System.out.println("Sem dicas!");
