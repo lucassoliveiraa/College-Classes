@@ -31,10 +31,14 @@ public class Main {
 
         Emprestimo emp1 = new Emprestimo(aluno1, livro1);
         Emprestimo emp2 = new Emprestimo(aluno2, livro1);
+        Emprestimo emp3 = new Emprestimo(aluno1, livro2);
+        Emprestimo emp4 = new Emprestimo(aluno2, livro2);
 
         GerenciarEmprestimo gerenciador = new GerenciarEmprestimo();
         gerenciador.realizarEmprestimo(emp1);
         gerenciador.realizarEmprestimo(emp2);
+        gerenciador.realizarEmprestimo(emp3);
+        gerenciador.realizarEmprestimo(emp4);
 
         System.out.println(gerenciador.toString());
 
