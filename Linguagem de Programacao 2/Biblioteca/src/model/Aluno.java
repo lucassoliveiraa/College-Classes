@@ -9,7 +9,7 @@ public class Aluno {
     private LocalDate dataNascimento;
     private String nomeResponsavel;
     private String numResponsavel;
-    private Cotas cotas;
+    private int cotas;
     public Aluno(String nome, String codMatricula, int idade, LocalDate dataNascimento,
                  String nomeResponsavel, String numResponsavel) {
         this.nome = nome;
@@ -18,6 +18,7 @@ public class Aluno {
         this.dataNascimento = dataNascimento;
         this.nomeResponsavel = nomeResponsavel;
         this.numResponsavel = numResponsavel;
+        this.cotas = Cotas.qtdCotas;
     }
 
     public String getNome() {
@@ -51,11 +52,19 @@ public class Aluno {
         this.numResponsavel = numResponsavel;
     }
 
-    public Cotas getCotas() {
+    public int getCotas() {
         return cotas;
     }
 
-    public void setCotas(Cotas cotas) {
+    public void setCotas(int cotas) {
         this.cotas = cotas;
+    }
+
+    @Override
+    public String toString() {
+        return "Aluno{" +
+                "nome='" + nome + '\'' +
+                ", codMatricula='" + codMatricula + '\'' +
+                '}';
     }
 }

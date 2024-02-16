@@ -1,7 +1,7 @@
 package model;
 
 public class Cotas {
-    private int qtdCotas = 3;
+    protected static int qtdCotas = 3;
 
     public int getQtdCotas() {
         return qtdCotas;

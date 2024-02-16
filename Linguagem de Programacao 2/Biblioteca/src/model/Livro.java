@@ -12,6 +12,19 @@ public class Livro {
 
     private int edicao;
     private int qtdLivros;
+
+    public Livro(String titulo, String nomeAutora, String editora, LocalDate anoDePublicação,
+                 int paginas, String ISBN, int edicao, int qtdLivros) {
+        this.titulo = titulo;
+        this.nomeAutora = nomeAutora;
+        this.editora = editora;
+        this.anoDePublicação = anoDePublicação;
+        this.paginas = paginas;
+        this.ISBN = ISBN;
+        this.edicao = edicao;
+        this.qtdLivros = qtdLivros;
+    }
+
     public String getTitulo() {
         return titulo;
     }
@@ -44,5 +57,14 @@ public class Livro {
 
     public void setQtdLivros(int qtdLivros) {
         this.qtdLivros = qtdLivros;
+    }
+
+    @Override
+    public String toString() {
+        return "Livro{" +
+                "titulo='" + titulo + '\'' +
+                ", nomeAutora='" + nomeAutora + '\'' +
+                ", qtdLivros=" + qtdLivros +
+                '}';
     }
 }
