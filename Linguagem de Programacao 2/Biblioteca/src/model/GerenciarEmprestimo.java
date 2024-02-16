@@ -16,12 +16,8 @@ public class GerenciarEmprestimo {
         }
     }
 
-//    @Override
-//    public String toString() {
-//        return "GerenciarEmprestimo{" +
-//                "emprestimosRealizados=" + emprestimosRealizados +
-//                '}';
-//    }
+    //Criar função para devolução de livro e incremento da qtd livros e qtd cotas do aluno
+    //Criar função para adicionar uma lista de livros para um aluno apenas
 
     @Override
     public String toString() {
