@@ -25,7 +25,7 @@ public class GerenciarEmprestimo {
         retorno.append("[ " + "\n");
         for (int i = 0; i < emprestimosRealizados.size(); i++) {
             Emprestimo emprestimo = emprestimosRealizados.get(i);
-            retorno.append(i + " - Aluno: " + emprestimo.getAluno().getNome() + " | Cod Matricula: " + emprestimo.getAluno().getCodMatricula() +
+            retorno.append(i + " - Aluno: " + emprestimo.getAluno().getNome() + " | Cod Matricula: " + emprestimo.getAluno().getCodigo() +
                     " | Livro: " + emprestimo.getLivro().getTitulo() + " | Autora: " + emprestimo.getLivro().getNomeAutora() + "\n"
             );
         }

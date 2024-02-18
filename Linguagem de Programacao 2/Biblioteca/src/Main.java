@@ -12,7 +12,7 @@ public class Main {
                     15, LocalDate.of(2009, 1, 8),
                     "Marcela", "77-988046711"
                 );
-        Aluno aluno2 = new Aluno("Aidetico", "112320",
+        Aluno aluno2 = new Aluno("Air", "112320",
                 16, LocalDate.of(2008, 2, 10),
                 "Dimas", "77-988626711"
         );

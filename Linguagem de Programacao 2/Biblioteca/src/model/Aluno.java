@@ -2,39 +2,17 @@ package model;
 
 import java.time.LocalDate;
 
-public class Aluno {
-    private String nome;
-    private String codMatricula;
-    private int idade;
-    private LocalDate dataNascimento;
+public class Aluno extends Pessoa{
+
     private String nomeResponsavel;
     private String numResponsavel;
     private int cotas;
-    public Aluno(String nome, String codMatricula, int idade, LocalDate dataNascimento,
+    public Aluno(String nome, String codigo, int idade, LocalDate dataNascimento,
                  String nomeResponsavel, String numResponsavel) {
-        this.nome = nome;
-        this.codMatricula = codMatricula;
-        this.idade = idade;
-        this.dataNascimento = dataNascimento;
+        super(nome, codigo, idade, dataNascimento);
         this.nomeResponsavel = nomeResponsavel;
         this.numResponsavel = numResponsavel;
         this.cotas = Cotas.qtdCotas;
-    }
-
-    public String getNome() {
-        return nome;
-    }
-
-    public String getCodMatricula() {
-        return codMatricula;
-    }
-
-    public int getIdade() {
-        return idade;
-    }
-
-    public LocalDate getDataNascimento() {
-        return dataNascimento;
     }
 
     public String getNomeResponsavel() {
@@ -63,8 +41,8 @@ public class Aluno {
     @Override
     public String toString() {
         return "Aluno{" +
-                "nome='" + nome + '\'' +
-                ", codMatricula='" + codMatricula + '\'' +
+                "nome='" + getNome() + '\'' +
+                ", codMatricula='" + getCodigo() + '\'' +
                 '}';
     }
 }
