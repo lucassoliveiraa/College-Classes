@@ -40,5 +40,8 @@ public class Main {
         gerenciador.realizarEmprestimo(emp4);
 
         System.out.println(gerenciador.toString());
+        gerenciador.devolverEmprestimo(emp1);
+
+        System.out.println(gerenciador.toString());
     }
 }
