@@ -12,7 +12,7 @@ public class GerenciarEmprestimo {
                     "mais nenhum exemplar no acervo");
         } else {
             emprestimosRealizados.add(emprestimo);
-            emprestimo.getAluno().setCotas(emprestimo.getAluno().getCotas() - 1);
+            emprestimo.getAluno().setCotas(1);
             emprestimo.getLivro().setQtdLivros(
                     emprestimo.getLivro().getQtdLivros() - 1
             );
@@ -24,13 +24,13 @@ public class GerenciarEmprestimo {
     }
 
     //Criar função para devolução de livro e incremento da qtd livros e qtd cotas do aluno
-    public void devolverEmprestimo(Emprestimo emprestimo) {
-        if (emprestimosRealizados.contains(emprestimo)) {
-            emprestimosRealizados.remove(emprestimo);
-            emprestimo.getAluno().setCotas(emprestimo.getAluno().getCotas() + 1);
-            emprestimo.getLivro().setQtdLivros(emprestimo.getLivro().getQtdLivros() - 1);
-        }
-    }
+//    public void devolverEmprestimo(Emprestimo emprestimo) {
+//        if (emprestimosRealizados.contains(emprestimo)) {
+//            emprestimosRealizados.remove(emprestimo);
+//            emprestimo.getAluno().setQtdCotasTotal(emprestimo.getAluno().getCotas() + 1);
+//            emprestimo.getLivro().setQtdLivros(emprestimo.getLivro().getQtdLivros() - 1);
+//        }
+//    }
     //Criar função para adicionar uma lista de livros para um aluno apenas
 
     @Override

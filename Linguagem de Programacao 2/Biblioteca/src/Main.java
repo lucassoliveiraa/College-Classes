@@ -1,13 +1,11 @@
-import model.Aluno;
-import model.Emprestimo;
-import model.GerenciarEmprestimo;
-import model.Livro;
+import model.*;
 
 import java.time.LocalDate;
 import java.util.Date;
 
 public class Main {
     public static void main(String[] args) {
+        Cotas cota = new Cotas(400);
         Aluno aluno1 = new Aluno("Dudu", "102320",
                     15, LocalDate.of(2009, 1, 8),
                     "Marcela", "77-988046711"
@@ -34,6 +32,7 @@ public class Main {
         Emprestimo emp3 = new Emprestimo(aluno1, livro2);
         Emprestimo emp4 = new Emprestimo(aluno2, livro2);
 
+
         GerenciarEmprestimo gerenciador = new GerenciarEmprestimo();
         gerenciador.realizarEmprestimo(emp1);
         gerenciador.realizarEmprestimo(emp2);
@@ -41,6 +40,5 @@ public class Main {
         gerenciador.realizarEmprestimo(emp4);
 
         System.out.println(gerenciador.toString());
-
     }
 }

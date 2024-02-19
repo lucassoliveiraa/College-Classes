@@ -12,7 +12,7 @@ public class Aluno extends Pessoa{
         super(nome, codigo, idade, dataNascimento);
         this.nomeResponsavel = nomeResponsavel;
         this.numResponsavel = numResponsavel;
-        this.cotas = Cotas.qtdCotas;
+        this.cotas = Cotas.getQtdCotasAluno();
     }
 
     public String getNomeResponsavel() {
@@ -35,9 +35,9 @@ public class Aluno extends Pessoa{
     }
 
     public void setCotas(int cotas) {
-        this.cotas = cotas;
+        this.cotas = Cotas.getQtdCotasAluno() - cotas;
+        Cotas.setQtdCotasAluno(Cotas.getQtdCotasAluno() - cotas);
     }
-
     @Override
     public String toString() {
         return "Aluno{" +
